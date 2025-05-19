@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">SLA_Maintenance</string>
+    <string name="apk">IT SLA \nMaintenance</string>
+
+    <!--    Login regis -->
+    <string name="ketAwalLog">Masuk ke Aplikasi Maintanance</string>
+    <string name="login">Login</string>
+    <string name="regis">Register</string>
+
+    <string name="inpEmail">Masukkan Email Anda</string>
+    <string name="inpPassword">Masukkan Password Anda</string>
+    <string name="inpNama">Masukkan Nama Anda</string>
+
+    <string name="toLogin">Apakah anda sudah Mempunyai Akun? <b><i><u>Klik Disini</u></i></b> </string>
+    <string name="toRegis">Apakah anda belum Mempunyai Akun? <b><i><u>Klik Disini</u></i></b> </string>
+
+    <!--    home    -->
+    <string name="nama">MUHAMMAD AFDHAL F</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Spesifikasi"> * Merk - LG\n
+        * 43 Inch\n
+        * 4K Smart UHD\n
+        * 20 W</string>
+
+
+    <!--    add -->
+
+
+    <!--    Detail Report-->
+
+    <string name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam acuy dictum interdum urna in accumsan. Etiam ultricies, turpis ornare vehicula egestas, enim felis scelerisque lectus, ac suscipit orci nibh eu massa.
+  </string>
+
+
+    <!--    layout Riwayat  -->
+    <string name="viewDetails"><u>View Details</u></string>
+
+<!--    Maintanance-->
+    <string name="pendingOrDone">Jika telah selesai, tekan <b>Tombol Selesai</b> dibawah ini dan Jika belum selesai silahkan tekan <u><b>Tombol Pending</b></u></string>
+
+
+<!--    home    -->
+    <string name="jamKerja">Ingin Melihat Detail Jam kerja anda?  <b><i><u>Klik Disini</u></i></b> </string>
+
+</resources>

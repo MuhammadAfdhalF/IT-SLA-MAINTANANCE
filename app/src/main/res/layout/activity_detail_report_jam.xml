@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/apk"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="View Detail Report" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardJudul">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Details"
+                    android:textColor="@color/blue"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/cardImgReport"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImgReport"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtReportDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDetails">
+
+                    <ImageView
+                        android:id="@+id/imgReports"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_reports" />
+                </androidx.cardview.widget.CardView>
+
+
+                <!--    Date    -->
+                <TextView
+                    android:id="@+id/txtReportDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tanggal Report Laporan"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilReportDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardImgReport" />
+
+                <TextView
+                    android:id="@+id/panggilReportDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="20 Maret 2006"
+                    app:layout_constraintBottom_toTopOf="@+id/txtPelaporDetail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReportDate" />
+
+
+                <!--    Pelapor    -->
+                <TextView
+                    android:id="@+id/txtPelaporDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Pelapor"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilPelaporDetail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilReportDate" />
+
+                <TextView
+                    android:id="@+id/panggilPelaporDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintBottom_toTopOf="@+id/txtCompany"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPelaporDetail" />
+
+                <!--    company    -->
+                <TextView
+                    android:id="@+id/txtCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Company"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilCompany"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilPelaporDetail" />
+
+                <TextView
+                    android:id="@+id/panggilCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="MMN"
+                    app:layout_constraintBottom_toTopOf="@+id/txtReportLocation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCompany" />
+
+
+                <!--    location    -->
+                <TextView
+                    android:id="@+id/txtReportLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Location"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilLokasiReport"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilCompany" />
+
+                <TextView
+                    android:id="@+id/panggilLokasiReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Parangloe"
+                    app:layout_constraintBottom_toTopOf="@+id/txtJenisHardware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReportLocation" />
+
+                <!--                &lt;!&ndash;    Content    &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtReportContent"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Catatan"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/panggilLokasiReport" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilContentReport"-->
+                <!--                    android:layout_width="360dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:text="@string/content"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtReportContent" />-->
+
+
+                <!--    JenisHardware    -->
+                <TextView
+                    android:id="@+id/txtJenisHardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Jenis Hardware"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilJenisHardware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilLokasiReport" />
+
+                <TextView
+                    android:id="@+id/panggilJenisHardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="aaaa"
+                    app:layout_constraintBottom_toTopOf="@+id/txtUraianHardware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtJenisHardware" />
+
+                <!--    Uraian Hardware    -->
+                <TextView
+                    android:id="@+id/txtUraianHardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Uraian Hardware"
+                    android:textColor="@color/blue"
+                    app:layout_constraintBottom_toTopOf="@+id/panggilUraianHardware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilJenisHardware" />
+
+                <TextView
+                    android:id="@+id/panggilUraianHardware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content"
+                    app:layout_constraintBottom_toTopOf="@+id/txtJenisSoftware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUraianHardware" />
+
+                <!--    Jenis Software    -->
+                <TextView
+                    android:id="@+id/txtJenisSoftware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Jenis Software"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilUraianHardware" />
+
+                <TextView
+                    android:id="@+id/panggiJenisSoftware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="aaaa"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtJenisSoftware" />
+
+                <!--    Uraian Software    -->
+                <TextView
+                    android:id="@+id/txtUraianSoftware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Uraian Software"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggiJenisSoftware" />
+
+                <TextView
+                    android:id="@+id/panggilUraianSoftware"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUraianSoftware" />
+
+                <!--    Aplikasi IT Tol    -->
+                <TextView
+                    android:id="@+id/txtAplikasiItTol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Aplikasi IT dan Tol"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilUraianSoftware" />
+
+                <TextView
+                    android:id="@+id/panggilItTol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="aaaa"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAplikasiItTol" />
+
+                <!--    Uraian Software    -->
+                <TextView
+                    android:id="@+id/txtUraianItToll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Uraian IT dan Tol"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilItTol" />
+
+                <TextView
+                    android:id="@+id/panggilUraianItTol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUraianItToll" />
+
+
+                <!--    Biaya   -->
+                <TextView
+                    android:id="@+id/txtBiaya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Biaya"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilUraianItTol" />
+
+                <TextView
+                    android:id="@+id/panggilBiaya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="1000000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtBiaya" />
+
+
+                <!--    Shift   -->
+                <TextView
+                    android:id="@+id/txtShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Shift"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilBiaya" />
+
+                <TextView
+                    android:id="@+id/panggilShift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtShift" />
+
+                <!--    Category   -->
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Category"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilShift" />
+
+                <TextView
+                    android:id="@+id/panggilCatgory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Toll / Non TOll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCategory" />
+
+                <!--    Content    -->
+                <TextView
+                    android:id="@+id/txtReportContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Catatan"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilCatgory" />
+
+                <TextView
+                    android:id="@+id/panggilContentReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReportContent" />
+
+
+                <View
+                    android:id="@+id/garis1"
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FF000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilContentReport" />
+
+                <!--            &lt;!&ndash;                    PENDING                 &ndash;&gt;-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtJudulPending"-->
+                <!--                    android:layout_width="360dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="PENDING"-->
+                <!--                    android:textSize="30dp"-->
+                <!--                    android:textColor="@color/red"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/garis1" />-->
+
+
+                <!--                &lt;!&ndash;    Username Pending   &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtUsernamePending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Pelapor Pending"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtJudulPending" />-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilUsernamPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="-"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtUsernamePending" />-->
+
+                <!--                &lt;!&ndash;   Tanggal Report Pending    &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtTglReportPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Tanggal Report Pending"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/panggilUsernamPending" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilTanggalReportPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:text="-"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtTglReportPending" />-->
+
+                <!--                &lt;!&ndash;    Tanggal Selesai  Pending   &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtTglSelesaiPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Tanggal Selesai Pending"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/panggilTanggalReportPending" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilTanggalSelesaiPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:text="-"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtTglSelesaiPending" />-->
+
+                <!--                &lt;!&ndash;    Waktu Handle Pending   &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtWaktuHandlePending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Waktu Pending"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/panggilTanggalSelesaiPending" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilWaktuHandlePending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:text="-"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtWaktuHandlePending" />-->
+
+
+                <!--                                &lt;!&ndash;    Deskripsi Pending   &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtDeskripsiPending"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Deskripsi Pending"-->
+                <!--                    android:textColor="@color/blue"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/panggilWaktuHandlePending" />-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/panggilDeskripsiPending"-->
+                <!--                    android:layout_width="360dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="5dp"-->
+                <!--                    android:text="-"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtDeskripsiPending" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvWorker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/garis1" />
+
+                <!--    garis   -->
+                <View
+                    android:id="@+id/garis2"
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FF000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvWorker" />
+                <!--                Detail              -->
+
+                <!--                Detail              -->
+                <TextView
+                    android:id="@+id/txtJudulHandled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Handled"
+                    android:textColor="@color/blue"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/garis2" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHandled"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtJudulHandled">
+
+                    <ImageView
+                        android:id="@+id/fotoAkhirDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/handle_img" />
+                </androidx.cardview.widget.CardView>
+
+                <!--    Username Pending   -->
+                <TextView
+                    android:id="@+id/txtUsernameHandled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Pelapor Handle"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardHandled" />
+
+                <TextView
+                    android:id="@+id/panggilUsernameHandled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="-"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUsernameHandled" />
+
+
+                <!--   Tanggal Report    -->
+                <TextView
+                    android:id="@+id/txtTglReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tanggal Report Handle "
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilUsernameHandled" />
+
+                <TextView
+                    android:id="@+id/panggilTanggalReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTglReport" />
+
+                <!--    Tanggal Selesai    -->
+                <TextView
+                    android:id="@+id/txtTglSelesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tanggal Selesai Handle"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilTanggalReport" />
+
+                <TextView
+                    android:id="@+id/panggilTanggalSelesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTglSelesai" />
+
+                <!--    Waktu Handle   -->
+                <TextView
+                    android:id="@+id/txtWaktuHandle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Waktu Handle"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilTanggalSelesai" />
+
+                <TextView
+                    android:id="@+id/panggilWaktuHandle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtWaktuHandle" />
+
+                <!--    Kondisi Akhir    -->
+                <TextView
+                    android:id="@+id/txtKondisiAkhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Kondisi Akhir"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilWaktuHandle" />
+
+                <TextView
+                    android:id="@+id/panggilKondisiAKhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtKondisiAkhir" />
+
+
+                <TextView
+                    android:id="@+id/txtTotalKeseluruhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Total Waktu Maintanance"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilKondisiAKhir" />
+
+                <TextView
+                    android:id="@+id/panggilTotalKeseluruhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="0 jam 0 menit"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTotalKeseluruhan" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnBackReport"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="150dp"
+                    android:backgroundTint="@color/abu"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilTotalKeseluruhan">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Back"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnHandledReport"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:backgroundTint="@color/red"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnBackReport"
+                    app:layout_constraintTop_toBottomOf="@+id/panggilTotalKeseluruhan">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Handled"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBackReport" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

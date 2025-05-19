@@ -1,0 +1,30 @@
+//package com.acuy.sla_maintenance.model
+//
+//import com.google.gson.annotations.SerializedName
+//
+//data class Tes(
+//
+//	@field:SerializedName("data")
+//	val data: List<DataItem?>? = null,
+//
+//	@field:SerializedName("start_year")
+//	val startYear: Int? = null,
+//
+//	@field:SerializedName("message")
+//	val message: String? = null,
+//
+//	@field:SerializedName("end_year")
+//	val endYear: Int? = null
+//)
+//
+//data class DataItem(
+//
+//	@field:SerializedName("total")
+//	val total: Int? = null,
+//
+//	@field:SerializedName("user_id")
+//	val userId: Int? = null,
+//
+//	@field:SerializedName("durations")
+//	val durations: List<Int?>? = null
+//)

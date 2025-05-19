@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
+        tools:context=".HalamanAddLaporan">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardUser"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/namaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/nama"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardUser">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/apk"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Halaman Add Report" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFotoProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/white_custom"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_man_3_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardReport"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardJudul">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Form Add Reports"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!--         ============            -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardReport">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtCompany"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Company"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpCompany"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpCompany"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="40dp"
+                    android:textColorHint="#B3B3B3"
+                    app:layout_constraintBottom_toTopOf="@+id/inpKategorActivity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtCompany"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/panggilCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:drawableEnd="@drawable/ic_spinner"
+                        android:hint="Choose Company"
+                        android:inputType="none"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtKategorActivity"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Kategori \nActivity"
+                    android:textSize="17dp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpKategorActivity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCompany" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpKategorActivity"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#B3B3B3"
+                    app:layout_constraintBottom_toTopOf="@+id/checkboxContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtKategorActivity"
+                    app:layout_constraintTop_toBottomOf="@+id/inpCompany">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/panggilKategorActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:drawableEnd="@drawable/ic_spinner"
+                        android:hint="Choose Kategori Activity"
+                        android:inputType="none"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginStart="220dp"-->
+                <!--                android:layout_marginTop="55dp"-->
+                <!--                android:src="@drawable/ic_spinner"-->
+                <!--                app:layout_constraintStart_toEndOf="@+id/txtCompany"-->
+                <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                &lt;!&ndash;        Tanggal    &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtTanggal"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="20dp"-->
+                <!--                    android:layout_marginTop="55dp"-->
+                <!--                    android:text="Tanggal"-->
+                <!--                    android:textSize="17dp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtCompany" />-->
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/layoutTanggal"-->
+                <!--                    android:layout_width="252dp"-->
+                <!--                    android:layout_height="62dp"-->
+                <!--                    android:layout_marginStart="130dp"-->
+                <!--                    android:layout_marginTop="15dp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/inpCompany">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/inpTanggal"-->
+                <!--                        android:layout_width="250dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:background="@drawable/rounded"-->
+                <!--                        android:clickable="true"-->
+                <!--                        android:drawableTint="@color/black"-->
+                <!--                        android:focusable="false"-->
+                <!--                        android:hint="Choose Date"-->
+                <!--                        android:inputType="none"-->
+                <!--                        android:paddingHorizontal="16dp"-->
+                <!--                        android:paddingVertical="20dp"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+                <!--                    <ImageButton-->
+                <!--                        android:id="@+id/btnTanggal"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:background="@color/white"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        android:layout_marginTop="20dp"-->
+                <!--                        android:layout_marginEnd="15dp"-->
+                <!--                        android:src="@drawable/date"/>-->
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <!--            Jenis Hardware-->
+
+                <TextView
+                    android:id="@+id/txtJenisHardware"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Jenis \nHardware"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/checkboxContainer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtKategorActivity" />
+
+                <LinearLayout
+                    android:id="@+id/checkboxContainer"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/inpUraianHardware"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtJenisHardware"
+                    app:layout_constraintTop_toBottomOf="@id/inpKategorActivity">
+
+                    <CheckBox
+                        android:id="@+id/boxPC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PC/Laptop" />
+
+                    <CheckBox
+                        android:id="@+id/boxPrinter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Printer/Periferal" />
+
+                    <CheckBox
+                        android:id="@+id/boxServer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Server" />
+
+                    <CheckBox
+                        android:id="@+id/boxInternet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Internet/Jaringan" />
+
+                    <CheckBox
+                        android:id="@+id/boxDll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LTCS/TFI/PCS/RTM/CCTV" />
+
+                </LinearLayout>
+
+
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:id="@+id/checkboxContainer"-->
+                <!--                    android:layout_width="270dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="120dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/inpCompany">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/boxPC"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="PC/Laptop"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/boxPrinter"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Printer/Periferal"-->
+                <!--                        app:layout_constraintStart_toEndOf="@+id/boxPC"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/boxServer"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+
+                <!--                        android:text="Server"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/boxPC" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/boxInternet"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Internet/Jaringan"-->
+                <!--                        app:layout_constraintStart_toEndOf="@+id/boxServer"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/boxPC" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/boxDll"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+
+                <!--                        android:text="LTCS/TFI/PCS/RTM/CCTV"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toBottomOf="@+id/boxServer" />-->
+
+
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpUraianHardware"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded2"
+                    app:hintEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBoxSoftware"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtJenisHardware"
+                    app:layout_constraintTop_toBottomOf="@+id/checkboxContainer">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/panggilUraianHardware"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded"
+                        android:hint="Hardware problem description"
+                        android:textColorHint="@color/teksBlur"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--            Standard Aplikasi   -->
+                <TextView
+                    android:id="@+id/txtJenisSoftware"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Standart \nAplikasi"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBoxSoftware"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inpUraianHardware" />
+
+
+                <LinearLayout
+                    android:id="@+id/checkBoxSoftware"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="17dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/inpUraianStandartAplikasi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtJenisSoftware"
+                    app:layout_constraintTop_toBottomOf="@id/inpUraianHardware">
+
+                    <CheckBox
+                        android:id="@+id/boxSistemOperasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sistem Operasi" />
+
+                    <CheckBox
+                        android:id="@+id/boxMicrosoft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Microsoft Office" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpUraianStandartAplikasi"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded2"
+                    app:hintEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/checkITdanTol"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtJenisSoftware"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxSoftware">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/panggilUraianStandartAplikasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded"
+                        android:hint="System problem description"
+                        android:textColorHint="@color/teksBlur"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                Aplikasi IT dan Peralatan Tol       -->
+                <TextView
+                    android:id="@+id/txtItTol"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="Aplikasi IT \ndan \nPeralatan \nTol"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/checkITdanTol"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inpUraianStandartAplikasi" />
+
+                <LinearLayout
+                    android:id="@+id/checkITdanTol"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="17dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/inpUraianItTol"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtItTol"
+                    app:layout_constraintTop_toBottomOf="@id/inpUraianStandartAplikasi">
+
+                    <CheckBox
+                        android:id="@+id/boxProgramPCS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Program PCS" />
+
+                    <CheckBox
+                        android:id="@+id/boxLTCS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Program LTCS/TFI" />
+
+                    <CheckBox
+                        android:id="@+id/boxRTM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Program RTM" />
+
+                    <CheckBox
+                        android:id="@+id/boxProgramCCTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Program CCTV/VMS" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpUraianItTol"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded2"
+                    app:hintEnabled="false"
+                    app:layout_constraintBottom_toTopOf="@+id/inpCatatan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtItTol"
+                    app:layout_constraintTop_toBottomOf="@+id/checkITdanTol">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/panggilUraianItdanTol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded"
+                        android:hint="Application Problem Description IT and Toll"
+                        android:textColorHint="@color/teksBlur"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--                Catatan      -->
+
+                <TextView
+                    android:id="@+id/txtCatatan"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="Catatan"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpCatatan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inpUraianItTol" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpCatatan"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded2"
+
+                    app:hintEnabled="false"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtCatatan"
+                    app:layout_constraintTop_toBottomOf="@+id/inpUraianItTol">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/panggilCatatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded"
+                        android:hint="Notes if Necessary"
+                        android:textColorHint="@color/teksBlur"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                Shift           -->
+                <TextView
+                    android:id="@+id/txtShift"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:text="Shift"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpShift"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inpCatatan" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpShift"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded2"
+                    android:textColorHint="@color/teksBlur"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtShift"
+                    app:layout_constraintTop_toBottomOf="@+id/inpCatatan"
+                    app:startIconDrawable="@drawable/shift">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/panggilShift"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:drawableEnd="@drawable/ic_spinner"
+                        android:hint="Choose Shift"
+                        android:inputType="none"
+                        android:paddingStart="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--    Lokasi      -->
+                <TextView
+                    android:id="@+id/txtLokasi"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:text="Lokasi"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpLokasi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtShift" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpLokasi"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded2"
+                    android:textColorHint="@color/teksBlur"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtLokasi"
+                    app:layout_constraintTop_toBottomOf="@+id/inpShift"
+                    app:startIconDrawable="@drawable/location">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/panggilLokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:drawableEnd="@drawable/ic_spinner"
+                        android:hint="Choose Location"
+                        android:inputType="none"
+                        android:paddingStart="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                Kategori        -->
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="Kategori"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@id/inpKategori"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLokasi" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inpKategori"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded2"
+                    android:textColorHint="@color/teksBlur"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtCategory"
+                    app:layout_constraintTop_toBottomOf="@+id/inpLokasi"
+                    app:startIconDrawable="@drawable/kategori">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/panggilKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:drawableEnd="@drawable/ic_spinner"
+                        android:hint="Choose Category"
+                        android:inputType="none"
+                        android:paddingStart="20dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--                &lt;!&ndash;                Kondisi Akhir       &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtKondisiAkhir"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="20dp"-->
+                <!--                    android:layout_marginTop="40dp"-->
+                <!--                    android:text="Kondisi \nAkhir"-->
+                <!--                    android:textSize="17sp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/txtKategori" />-->
+
+                <!--                <com.google.android.material.textfield.TextInputLayout-->
+                <!--                    android:id="@+id/inpKondisiAkhir"-->
+                <!--                    android:layout_width="250dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_marginStart="130dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/rounded2"-->
+                <!--                    android:hint="Insert Last Condiiton"-->
+                <!--                    android:textColorHint="@color/teksBlur"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/inpKategori">-->
+
+                <!--                    <com.google.android.material.textfield.TextInputEditText-->
+                <!--                        android:id="@+id/panggilKondisiAkhir"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:background="@drawable/rounded" />-->
+                <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!--                &lt;!&ndash;                Biaya           &ndash;&gt;-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txtBiaya"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="20dp"-->
+                <!--                    android:layout_marginTop="40dp"-->
+                <!--                    android:text="Biaya"-->
+                <!--                    android:textSize="17sp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/inpKategori" />-->
+
+                <!--                <com.google.android.material.textfield.TextInputLayout-->
+                <!--                    android:id="@+id/inpBiaya"-->
+                <!--                    android:layout_width="250dp"-->
+                <!--                    android:layout_height="60dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_marginStart="130dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/rounded2"-->
+                <!--                    android:hint="Imsert Cost"-->
+                <!--                    android:textColorHint="@color/teksBlur"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/inpKategori"-->
+                <!--                    app:startIconDrawable="@drawable/biaya">-->
+
+                <!--                    <com.google.android.material.textfield.TextInputEditText-->
+                <!--                        android:id="@+id/panggilBiaya"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:background="@drawable/rounded"-->
+                <!--                        android:inputType="number" />-->
+                <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <!--            ========        -->
+                <TextView
+                    android:id="@+id/txtPhoto"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:text="Photo"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/inpPhoto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCategory" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/inpPhoto"
+                    android:layout_width="250dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/inpKategori">
+
+                    <ImageView
+                        android:id="@+id/panggilImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_add" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnSubmitReport"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:backgroundTint="@color/green"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintBottom_toTopOf="@+id/v1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inpPhoto">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Save Report"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="130dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSubmitReport" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <!--                <com.google.android.material.textfield.TextInputLayout-->
+    <!--                    android:id="@+id/inpJenisHardware"-->
+    <!--                    android:layout_width="250dp"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginStart="130dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:background="@drawable/rounded2"-->
+    <!--                    android:hint="Masukkan Jenis Hardware"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/inpTanggal">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/panggilJenisHardware"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="@drawable/rounded" />-->
+    <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--                &lt;!&ndash;            Standard Aplikasi   &ndash;&gt;-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/txtStandartAplikasi"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:layout_marginTop="30dp"-->
+    <!--                    android:text="Standart \nAplikasi"-->
+
+
+    <!--                    android:textSize="17sp"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/txtJenisHardware" />-->
+
+    <!--                <com.google.android.material.textfield.TextInputLayout-->
+    <!--                    android:id="@+id/inpStandartAplikasi"-->
+    <!--                    android:layout_width="250dp"-->
+    <!--                    android:layout_height="60dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginStart="130dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:background="@drawable/rounded2"-->
+    <!--                    android:hint="Masukkan Standart Aplikasi"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/inpJenisHardware">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/pamggilStandartAplikasi"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="@drawable/rounded" />-->
+    <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--                &lt;!&ndash;            uraian hardware&ndash;&gt;-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/txtUraianHardware"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:layout_marginTop="30dp"-->
+    <!--                    android:text="Uraian \nHardware"-->
+    <!--                    android:textSize="17sp"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/txtStandartAplikasi" />-->
+
+    <!--                <com.google.android.material.textfield.TextInputLayout-->
+    <!--                    android:id="@+id/inpUraianHardware"-->
+    <!--                    android:layout_width="250dp"-->
+    <!--                    android:layout_height="80dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginStart="130dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:background="@drawable/rounded2"-->
+    <!--                    android:hint="Masukkan Uraian Hardware"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/inpStandartAplikasi">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/panggilUraianHardware"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="@drawable/rounded" />-->
+    <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--                &lt;!&ndash;            Uraian Aplikasi &ndash;&gt;-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/txtUraianAplikasi"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:layout_marginTop="40dp"-->
+    <!--                    android:text="Uraian \nAplikasi"-->
+    <!--                    android:textSize="17sp"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/txtUraianHardware" />-->
+
+    <!--                <com.google.android.material.textfield.TextInputLayout-->
+    <!--                    android:id="@+id/inpUraianAplikasi"-->
+    <!--                    android:layout_width="250dp"-->
+    <!--                    android:layout_height="80dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginStart="130dp"-->
+    <!--                    android:layout_marginTop="10dp"-->
+    <!--                    android:background="@drawable/rounded2"-->
+    <!--                    android:hint="Masukkan Uraian Aplikasi"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toBottomOf="@+id/inpUraianHardware">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/panggilUraianAPlikasi"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:background="@drawable/rounded" />-->
+    <!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <!--            Lokasi-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/txtLocation"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="30dp"-->
+    <!--                android:layout_marginTop="50dp"-->
+    <!--                android:text="Location"-->
+    <!--                android:textSize="20dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/txtCompany" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatSpinner-->
+    <!--                android:id="@+id/inpLocation"-->
+    <!--                android:layout_width="230dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_marginStart="30dp"-->
+    <!--                android:layout_marginTop="30dp"-->
+    <!--                android:background="@drawable/spinner_background"-->
+    <!--                android:entries="@array/kategori_location"-->
+    <!--                android:spinnerMode="dropdown"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/txtLocation"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/inpCompany" />-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="225dp"-->
+    <!--                android:layout_marginTop="40dp"-->
+    <!--                android:src="@drawable/ic_spinner"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/txtLocation"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/inpCompany" />-->
+
+    <!--            &lt;!&ndash;            ========        &ndash;&gt;-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txtContent"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="30dp"-->
+    <!--                android:layout_marginTop="50dp"-->
+    <!--                android:text="Content"-->
+    <!--                android:textSize="20dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/txtLocation" />-->
+
+    <!--            <com.google.android.material.textfield.TextInputLayout-->
+    <!--                android:id="@+id/inpContent"-->
+    <!--                android:layout_width="240dp"-->
+    <!--                android:layout_height="150dp"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:layout_marginStart="35dp"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:background="@drawable/rounded2"-->
+    <!--                android:hint="Write Your Content Here ......"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/txtContent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/inpLocation">-->
+
+    <!--                <com.google.android.material.textfield.TextInputEditText-->
+    <!--                    android:id="@+id/panggilNama"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:background="@drawable/rounded" />-->
+    <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--            &lt;!&ndash;            ========        &ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/txtPhoto"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="30dp"-->
+    <!--                android:layout_marginTop="145dp"-->
+    <!--                android:text="Photo"-->
+    <!--                android:textSize="20dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/txtContent" />-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/inpPhoto"-->
+    <!--                android:layout_width="240dp"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:layout_marginStart="50dp"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                app:cardCornerRadius="10dp"-->
+    <!--                app:cardElevation="10dp"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/txtPhoto"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/inpContent">-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/img"-->
+    <!--                    android:layout_width="50dp"-->
+    <!--                    android:layout_height="50dp"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:src="@drawable/img_add" />-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:id="@+id/btnSubmitReport"-->
+    <!--                android:layout_width="150dp"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:backgroundTint="@color/green"-->
+    <!--                app:cardCornerRadius="15dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/inpPhoto">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="ADD"-->
+    <!--                    android:textColor="@color/white"-->
+    <!--                    android:textSize="20sp" />-->
+    <!--            </androidx.cardview.widget.CardView>-->
