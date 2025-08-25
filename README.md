@@ -60,5 +60,5 @@ Dengan aplikasi ini, proses maintenance lebih **efisien, transparan, dan terukur
 ---
 
 ## 🙋‍♂️ Author
-**Divisi IT – PT Nusantara Infrastructure Tbk**  
+
 Proyek untuk: **PT Makassar Metro Network** & **PT Makassar Airport Network**
