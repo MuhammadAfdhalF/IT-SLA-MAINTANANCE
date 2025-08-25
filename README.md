@@ -60,5 +60,11 @@ Dengan aplikasi ini, proses maintenance lebih **efisien, transparan, dan terukur
 ---
 
 ## 🙋‍♂️ Author
+**👨‍💻 Muhammad Afdhal F**
 
+- 📧 Email: [cuyafdal@gmail.com](mailto:muhammad.afdhal.f01@gmail.com)  
+- 📷 Instagram: [@holla.cuy](https://instagram.com/holla.cuy)  
+- 💼 LinkedIn: [Muhammad Afdhal F](https://id.linkedin.com/in/muhammad-afdhal-f-3b3317217)  
+- 🧠 Passionate in Mobile Dev, Web Dev, and AI
+- 🚀 Let’s build cool things together!
 Proyek untuk: **PT Makassar Metro Network** & **PT Makassar Airport Network**
