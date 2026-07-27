@@ -275,7 +275,7 @@ Admin System       : React Web Application
 
 **Muhammad Afdhal F**
 
-📧 Email: [cuyafdal@gmail.com](mailto:muhammad.afdhal.f01@gmail.com)
+📧 Email: [muhammad.afdhal.f01@gmail.com](mailto:muhammad.afdhal.f01@gmail.com)
 📷 Instagram: [@holla.cuy](https://instagram.com/holla.cuy)
 💼 LinkedIn: [Muhammad Afdhal F](https://id.linkedin.com/in/muhammad-afdhal-f-3b3317217)
 💻 GitHub: [MuhammadAfdhalF](https://github.com/MuhammadAfdhalF)
